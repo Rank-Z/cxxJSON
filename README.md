@@ -1,2 +1,2 @@
 # cxxJSON
-a JSON lib in C++
+a simple JSON parse for modern C++,will be more soon.
