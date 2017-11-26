@@ -107,7 +107,7 @@ void testarray()
 void testobject()
 {
 	JsonValue v;
-	testbase(JSON_PARSE_OK, v.Parse(" { ""\"n\" : null , ""\"f\" : false , ""\"t\" : true , ""\"i\" : 123 , ""\"s\" : \"abc\", ""\"a\" : [ 1, 2, 3 ],""\"o\" : { \"1\" : 1, \"2\" : 2, \"3\" : 3 }"" } "));
+	testbase(JSON_PARSE_OK, v.Parse(" { ""\"n\" : null , ""\"f\" : false , ""\"t\" : true , ""\"num\" : 123 , ""\"s\" : \"abc\", ""\"arr\" : [ 1, 2, 3 ],""\"obj\" : { \"1\" : 1, \"2\" : 2, \"3\" : 3 }"" } "));
 	testbase(JSON_OBJECT, v.GetType());
 }
 

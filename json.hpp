@@ -40,23 +40,24 @@ struct JsonValue
 	int _Pares(const char* str, const char*& end);
 	void _Reset();
 
-	int GetType();
-	double GetNum();
-	_STD string GetString();
+	JsonType GetType();
+	bool GetBool();
+	double& GetNum();
+	_STD string& GetString();
 	int GetStringSize();
-	JsonValue& GetArrayElement(int pos);
 	JsonArray& GetArray();
 	int GetArraySize();
 	int GetObjectSize();
-	JsonMember& GetObjectMember(int pos);
 	JsonObject& GetObject();
 };
 
 struct JsonArray
 {
-
 	_STD vector<JsonValue> valarray;
+
 	int arrParse(const char*& str);
+	JsonValue& operator[](int pos);
+	const JsonValue& operator[](int pos)const;
 };
 
 struct JsonMember
@@ -69,10 +70,8 @@ struct JsonObject
 {
 	_STD vector<JsonMember> memberarray;
 
-	JsonObject() = default;
-
 	int objParse(const char*& c);
-
-
+	JsonMember& operator[](int pos);
+	const JsonMember& operator[](int pos)const;
 };
 
