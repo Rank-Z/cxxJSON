@@ -39,6 +39,11 @@ struct JsonValue
 	int Parse(const char* str);
 	int _Pares(const char* str, const char*& end);
 	void _Reset();
+	_STD string stringgenerate(_STD string&) const;
+	_STD string Generate() const;
+	_STD string _GenerateString() const;
+	_STD string _GenerateArray() const;
+	_STD string _GenerateObject() const;
 
 	JsonType GetType();
 	bool GetBool();
@@ -46,6 +51,7 @@ struct JsonValue
 	_STD string& GetString();
 	int GetStringSize();
 	JsonArray& GetArray();
+
 	int GetArraySize();
 	int GetObjectSize();
 	JsonObject& GetObject();
