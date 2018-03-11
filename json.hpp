@@ -1,3 +1,6 @@
+#ifndef JSON_HPP
+#define JSON_HPP
+
 #include<iostream>
 #include<vector>
 #include<string>
@@ -81,3 +84,4 @@ struct JsonObject
 	const JsonMember& operator[](int pos)const;
 };
 
+#endif // !JSON_HPP
