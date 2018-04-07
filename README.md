@@ -1,2 +1,2 @@
 # cxxJSON
-a simple JSON parse for modern C++,will be more soon.
+一个包含JSON解析器和生成器的JSON库
